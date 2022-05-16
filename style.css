@@ -37,7 +37,7 @@ body{
     border:2px solid #3498db;
     width: 220px;
 }
-.login input[type="button"]{
+.login input[type="submit"]{
     width:150px;
     border: 2px solid #2ecc71;
     cursor: pointer;
