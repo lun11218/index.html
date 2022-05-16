@@ -47,7 +47,7 @@ body{
     width: 280px;
     transition: 0.5s;
 }
-.login input[type="button"]:hover {
+.login input[type="submit"]:hover {
     background-color: #2ecc71;
     transition: 0.5s;
 }
