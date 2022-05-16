@@ -7,11 +7,11 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <form  class="login">
+        <form  class="login" action="/connect.php" method="post">
             <h1>Login</h1>
             <input type="text" placeholder="Username"/>
             <input type="password" placeholder="Password" />
-            <input type="button" value="Submit" onclick="window.open('https://lun11218.github.io/index.html/login-success.html')"></button>
+            <input type="submit" value="Submit" ></button>
         </form>
     </body>
 </html>
