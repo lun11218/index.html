@@ -37,7 +37,7 @@ body{
     border:2px solid #3498db;
     width: 220px;
 }
-.login a{
+.login input[type="button"]{
     width:150px;
     border: 2px solid #2ecc71;
     cursor: pointer;
@@ -47,7 +47,7 @@ body{
     width: 280px;
     transition: 0.5s;
 }
-.login a:hover {
+.login input[type="button"]:hover {
     background-color: #2ecc71;
     transition: 0.5s;
 }
