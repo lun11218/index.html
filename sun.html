@@ -12,13 +12,15 @@
             
             body {
               margin: 0;
+              font-family: Arial;
+              background: #f1f1f1;
             }
             
             /* Style the header */
             .header {
               background:transparent;
               color: #fff;
-              padding: 20px;
+              padding: 30px;
               background-color: rgb(128,128,128);
               text-align: center;
             }
@@ -44,6 +46,61 @@
               background-color: #ddd;
               color: black;
             }
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* 右列 */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+.img {
+  text-align: center;
+  padding: 20px;
+}
+
+/* 为文章添加卡片效果 */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* 清除列之后的浮动 */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* 页脚 */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* 响应式布局 - 当屏幕的宽度小于 800 像素时，使两列堆叠而不是并排 */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* 响应式布局 - 当屏幕的宽度小于 400 像素时，使导航链接堆叠而不是并排 */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
             </style>
     </head>
     <body>
@@ -62,12 +119,26 @@
             <a href="uranus.html">Uranus</a>
             <a href="neptune.html">Neptune</a>
           </div>
-        <h2 class="widget-title">Picture of Sun</h2>
-        <img width="480" height="360" src="https://nineplanets.org/wp-content/uploads/2019/09/sun.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="https://nineplanets.org/wp-content/uploads/2019/09/sun.png" loading="lazy" srcset="https://nineplanets.org/wp-content/uploads/2019/09/sun.png 480w,  300w" sizes="(max-width: 480px) 100vw,480px">
-        <div class="fl-rich-text">
-            <p>The Sun is by far the largest object in the solar system. It contains more than 99.8% of the total mass of the Solar System (Jupiter contains most of the rest).
-
-It is often said that the Sun is an "ordinary" star. That's true in the sense that there are many others similar to it. But there are many more smaller stars than larger ones; the Sun is in the top 10% by mass. The median size of stars in our galaxy is probably less than half the mass of the Sun.</p>
-        </div>
+        <div class="row">
+          <div class="leftcolumn">
+            <div class="card">
+              <h2>Sun</h2>
+              <h5>Title description, May 16, 2022</h5>
+              <div class="img"><img  height="360" src="https://nineplanets.org/wp-content/uploads/2019/09/sun.png"></div>
+              <h2>Introduction</h2>
+              <p>Our Sun is a normal main-sequence G2 star, one of more than 100 billion stars in our galaxy.It is by far the largest object in the solar system. It contains more than 99.8% of the total mass of the Solar System (Jupiter contains most of the rest).</p>
+            </div>
+          </div>
+          <div class="rightcolumn" style="color: black;">
+            <div class="card">
+              <h2>About Me</h2>
+              <div  style="height:100px;">
+                <a href="https://www.facebook.com/profile.php?id=100009489028185" title="fb">
+                  <img height="50" src="https://www.facebook.com/images/fb_icon_325x325.png" >
+                </a>
+              </div>
+              <p>Only if you're that curious...</p>
+            </div>
+          </div>
     </body>
 </html>
