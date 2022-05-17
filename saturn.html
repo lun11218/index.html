@@ -12,13 +12,15 @@
             
             body {
               margin: 0;
+              font-family: Arial;
+              background: #f1f1f1;
             }
             
             /* Style the header */
             .header {
               background:transparent;
               color: #fff;
-              padding: 20px;
+              padding: 30px;
               background-color: rgb(128,128,128);
               text-align: center;
             }
@@ -44,6 +46,61 @@
               background-color: #ddd;
               color: black;
             }
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* 右列 */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+.img {
+  text-align: center;
+  padding: 20px;
+}
+
+/* 为文章添加卡片效果 */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* 清除列之后的浮动 */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* 页脚 */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* 响应式布局 - 当屏幕的宽度小于 800 像素时，使两列堆叠而不是并排 */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* 响应式布局 - 当屏幕的宽度小于 400 像素时，使导航链接堆叠而不是并排 */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
             </style>
     </head>
     <body>
@@ -62,12 +119,26 @@
             <a href="uranus.html">Uranus</a>
             <a href="neptune.html">Neptune</a>
           </div>
-        <h2 class="widget-title">Picture of Planet Saturn</h2>
-        <img width="480" height="360" src="https://nineplanets.org/wp-content/uploads/2019/09/saturn.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://nineplanets.org/wp-content/uploads/2019/09/saturn.png 480w, https://nineplanets.org/wp-content/uploads/2019/09/saturn-300x225.png 300w" sizes="(max-width: 480px) 100vw,480px">
-        <div class="fl-rich-text">
-            <div class="fl-rich-text">
+          <div class="row">
+            <div class="leftcolumn">
+              <div class="card">
+                <h2>Saturn</h2>
+                <h5>Title description, May 16, 2022</h5>
+                <div class="img"><img  height="360" src="https://nineplanets.org/wp-content/uploads/2019/09/saturn.png"></div>
+                <h2>Introduction</h2>
                 <p>Saturn is the sixth planet from the Sun, with the largest planetary rings in the Solar System. It is the second-largest planet after Jupiter, and recently, with many other moons being discovered, it surpassed the number of Jupiter’s moons and is now considered the planet with the most numerous satellites.</p>
+              </div>
             </div>
-        </div>
+            <div class="rightcolumn" style="color: black;">
+              <div class="card">
+                <h2>About Me</h2>
+                <div  style="height:100px;">
+                  <a href="https://www.facebook.com/profile.php?id=100009489028185" title="fb">
+                    <img height="50" src="https://www.facebook.com/images/fb_icon_325x325.png" >
+                  </a>
+                </div>
+                <p>Only if you're that curious...</p>
+              </div>
+            </div>
     </body>
 </html>
